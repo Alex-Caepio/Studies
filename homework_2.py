@@ -65,3 +65,14 @@ b[0] = 4
 print(a)
 print(id(a))
 print(id(b))
+
+x1 = [1, 2, 3]
+x2 = [1, 2, 3]
+x3 = [1, 2, 3]
+
+print(id(x1), id(x2), id(x3))
+
+a = 7
+b = 7
+
+print(id(a), id(b))
