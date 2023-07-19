@@ -76,3 +76,6 @@ a = 7
 b = 7
 
 print(id(a), id(b))
+
+arr = [print(I) for I in range(3)]
+print(arr)
