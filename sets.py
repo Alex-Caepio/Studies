@@ -17,3 +17,24 @@ set_from_list.discard(43)  # не возвращает ошибку при уд�
 
 print(set_from_list)
 print(set_from_tuple)
+
+my_list = [1, 2, 3, 5, 4, 6, 7, 8, 9]
+
+print(len(my_list))
+
+for i in range(len(my_list)):
+    print(my_list[i])
+
+
+# Напиши сортировку пузырьком
+
+def bubble_sort(my_list):
+    n = len(my_list)
+    for i in range(1, n):
+        for j in range(n - i):
+            if my_list[j] > my_list[j + 1]:
+                my_list[j], my_list[j + 1] = my_list[j + 1], my_list[j]
+    return my_list
+
+
+print(bubble_sort(my_list))
