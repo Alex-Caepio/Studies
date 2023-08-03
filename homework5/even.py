@@ -55,16 +55,13 @@ print(f"Число {number} {'четное' if result else 'нечетное'}")
 
 
 def analyze_and_convert(input_string):
-    # Проверяем, является ли входная строка числом
     if input_string.lstrip('-').replace('.', '', 1).isdigit():
-        # Если входная строка содержит точку, это дробное число
         if '.' in input_string:
             converted_number = float(input_string)
             if input_string.startswith('-'):
                 return f"Вы ввели отрицательное дробное число: {converted_number}"
             else:
                 return f"Вы ввели положительное дробное число: {converted_number}"
-        # Если входная строка не содержит точку, это целое число
         else:
             converted_number = int(input_string)
             if input_string.startswith('-'):
@@ -75,8 +72,7 @@ def analyze_and_convert(input_string):
         return f"Вы ввели некорректное число: {input_string}"
 
 
-# Примеры использования:
-print(analyze_and_convert("-6.7"))  # Вы ввели отрицательное дробное число: -6.7
-print(analyze_and_convert("5"))  # Вы ввели положительное целое число: 5
-print(analyze_and_convert("5.4r"))  # Вы ввели некорректное число: 5.4r
-print(analyze_and_convert("-.777"))  # Вы ввели отрицательное дробное число: -0.777
+print(analyze_and_convert("-6.7"))
+print(analyze_and_convert("5"))
+print(analyze_and_convert("5.4r"))
+print(analyze_and_convert("-.777"))
