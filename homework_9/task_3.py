@@ -9,7 +9,7 @@ class Circle:
         radius_difference = abs(self.radius - other.radius)
         if radius_difference == 0:
             return Point(0, 0)
-        return radius_difference
+        return abs(self.get_area() - other.get_area())
 
 
 class Point:
